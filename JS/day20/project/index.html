@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympics Countdown</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(120deg, #07152f, #0874bb, #002b60);
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding: 50px 10%;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            font-size: 15px;
+            line-height: 25px;
+        }
+
+        .timer {
+            margin-top: 170px;
+        }
+
+        #days {
+            font-size: 120px;
+            font-weight: bold;
+        }
+
+        .bottom {
+            display: flex;
+            gap: 65px;
+            margin-top: 10px;
+        }
+
+        .bottom h2 {
+            font-size: 50px;
+        }
+
+        .bottom p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h3>How many days until</h3>
+
+    <h1>Summer Olympics 2028</h1>
+
+    <div class="date">
+        📅 Friday, 14 July 2028<br>
+        📍 Los Angeles, USA
+    </div>
+
+    <div class="timer">
+
+        <div id="days">0</div>
+        <p>Days</p>
+
+        <div class="bottom">
+
+            <div>
+                <h2 id="hours">0</h2>
+                <p>Hours</p>
+            </div>
+
+            <div>
+                <h2 id="minutes">0</h2>
+                <p>Minutes</p>
+            </div>
+
+            <div>
+                <h2 id="seconds">0</h2>
+                <p>Seconds</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="first.js"></script>
+
+</body>
+</html>

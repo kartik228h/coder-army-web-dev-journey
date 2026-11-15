@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#grandparent{
+    width: 400%;
+    height: 400px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+}
+#parent{
+    width: 80%;
+    height: 150px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+#child{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    border: 1px solid white;
+    background-color: red;
+}

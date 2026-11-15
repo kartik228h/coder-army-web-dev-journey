@@ -1,0 +1,28 @@
+body>header{
+    background-color: green;
+}
+header>h1{
+    color: aliceblue;
+}
+header>p{
+    color: yellow;
+}
+main>h2{
+    color: red;
+}
+main>h3{
+    color: pink;
+}
+#blue{
+    color: aqua;
+}
+main>table>thead>tr{
+    background-color: blue;
+}
+#purple{
+    color: blueviolet;
+}
+footer{
+    background-color: rgb(137, 139, 138);
+    font-style: bold;
+}
