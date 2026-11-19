@@ -1,0 +1,104 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#090817;--panel:#121126;--panel2:#17152e;--gold:#e8c98b;--gold2:#f4dfb0;--muted:#a7a3bb;--white:#f8f5ff;--line:rgba(232,201,139,.2);--purple:#9b83dc}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--white);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:radial-gradient(ellipse at 78% 14%,rgba(91,60,147,.2),transparent 34%),radial-gradient(ellipse at 12% 56%,rgba(53,42,112,.16),transparent 35%),#090817}
+.starfield{position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.4;background-image:radial-gradient(1px 1px at 8% 17%,#fff,transparent),radial-gradient(1px 1px at 22% 72%,#e8c98b,transparent),radial-gradient(2px 2px at 73% 32%,#fff,transparent),radial-gradient(1px 1px at 91% 82%,#fff,transparent),radial-gradient(1px 1px at 55% 8%,#e8c98b,transparent),radial-gradient(1px 1px at 42% 46%,#fff,transparent),radial-gradient(2px 2px at 15% 91%,#fff,transparent);background-size:390px 330px}
+a{color:inherit;text-decoration:none}
+.site-header{height:82px;max-width:1240px;padding:0 32px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07);position:relative;z-index:5}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Playfair Display",serif;font-size:25px;letter-spacing:.5px}
+.brand-mark{color:var(--gold);font-size:25px}
+.nav-links{display:flex;gap:36px;color:#c1bdd0;font-size:12px;letter-spacing:.3px}
+.nav-links a:hover,.text-link:hover{color:var(--gold)}
+.header-cta{font-size:12px;color:var(--gold);border:1px solid var(--line);padding:12px 17px;border-radius:3px}
+.header-cta span{margin-left:10px}
+.menu-toggle{display:none;background:none;border:0;color:var(--gold);font-size:24px}
+.section-wrap{max-width:1160px;margin:0 auto;padding-left:28px;padding-right:28px}
+.hero{min-height:625px;display:grid;grid-template-columns:1fr 1fr;align-items:center;position:relative;padding-top:35px;padding-bottom:65px}
+.hero-copy{max-width:560px;z-index:1}
+.eyebrow{font-size:9px;letter-spacing:2.3px;color:var(--gold);font-weight:700;display:flex;align-items:center;gap:12px}
+.eyebrow-line{height:1px;width:30px;background:var(--gold);display:inline-block}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}
+.hero h1{font-size:clamp(55px,6.4vw,82px);line-height:1.07;letter-spacing:-2.5px;margin:26px 0 22px}
+h1 em,h2 em{font-weight:500;color:var(--gold);font-style:italic}
+.hero-description{color:var(--muted);font-size:14px;line-height:1.9;max-width:440px}
+.hero-actions{display:flex;align-items:center;gap:28px;margin-top:34px}
+.primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:25px;padding:16px 21px;background:linear-gradient(110deg,#e5c68c,#f3dfb6);color:#211a2c;font-weight:700;font-size:11px;letter-spacing:.3px;border:0;border-radius:2px;cursor:pointer;transition:.25s}
+.primary-btn:hover{transform:translateY(-3px);box-shadow:0 10px 35px #d5ad6540}
+.primary-btn span{font-size:16px}
+.text-link{font-size:11px;color:#d3cede}
+.text-link span{color:var(--gold);margin-left:8px}
+.hero-note{font-size:10px;color:#8d899f;margin-top:42px;letter-spacing:.3px}
+.mini-stars{color:var(--gold);margin-right:10px}
+.hero-art{height:490px;position:relative;display:flex;align-items:center;justify-content:center}
+.orbit{position:absolute;border:1px solid rgba(220,195,149,.19);border-radius:50%;transform:rotate(-25deg)}
+.orbit-one{width:390px;height:390px}.orbit-two{width:485px;height:275px;transform:rotate(35deg)}.orbit-three{width:300px;height:485px;transform:rotate(55deg)}
+.planet-main{width:225px;height:225px;border-radius:50%;background:radial-gradient(circle at 32% 28%,#8e79c3,#493b76 43%,#211b40 72%,#111027);box-shadow:inset -20px -20px 40px #070614,0 0 70px #8063bd35;display:grid;place-items:center;position:relative;z-index:1}
+.planet-main:before,.planet-main:after{content:"";position:absolute;border-radius:50%;background:#b39ad0;opacity:.16;filter:blur(1px)}
+.planet-main:before{width:48px;height:22px;top:55px;left:47px;transform:rotate(-32deg)}.planet-main:after{width:34px;height:34px;right:42px;bottom:48px}
+.planet-main span{font-size:45px;color:#e8c98b;text-shadow:0 0 25px #e8c98b}
+.planet-small{position:absolute;width:43px;height:43px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#f3d9a5,#9c6d51 65%,#3b2637);top:84px;right:55px;box-shadow:0 0 30px #e8c98b45}
+.planet-ring{position:absolute;width:70px;height:70px;border-radius:50%;border:8px solid #9a7aaf;opacity:.65;bottom:78px;left:58px;transform:rotate(-25deg);box-shadow:0 0 25px #9a7aaf44}
+.floating-star{position:absolute;color:var(--gold);font-size:22px}.star-a{top:48px;left:100px}.star-b{top:130px;right:60px;font-size:14px}.star-c{bottom:75px;right:100px}.star-d{top:50%;left:35px;font-size:13px}
+.art-caption{position:absolute;bottom:10px;font-size:9px;letter-spacing:2px;color:#8c849f}.art-caption span{color:var(--gold);margin-right:8px}
+.scroll-indicator{position:absolute;bottom:24px;left:28px;font-size:8px;letter-spacing:2px;color:#77738c;display:flex;align-items:center;gap:12px}
+.scroll-indicator span{width:32px;height:1px;background:var(--gold)}
+.intro-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);min-height:86px;display:flex;justify-content:center;align-items:center;gap:8%;padding:18px}
+.intro-strip>div{display:flex;align-items:center;gap:13px;color:#b5b0c4;font-size:11px}.strip-icon{color:var(--gold);font-size:20px}
+.reading-section{padding-top:115px;padding-bottom:105px}
+.section-heading h2,.daily-copy h2{font-size:48px;line-height:1.15;letter-spacing:-1px;margin:20px 0 15px}
+.section-heading>p,.daily-copy>p{color:var(--muted);font-size:13px;line-height:1.8;max-width:490px}
+.reading-layout{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;margin-top:48px;align-items:stretch}
+.form-card{background:linear-gradient(145deg,#17152d,#100f20);border:1px solid rgba(232,201,139,.2);padding:30px 34px;box-shadow:0 20px 65px #0003}
+.form-card-top{display:flex;align-items:center;gap:13px;margin-bottom:30px}
+.step-number{width:28px;height:28px;border:1px solid var(--gold);color:var(--gold);border-radius:50%;display:grid;place-items:center;font-size:10px}
+.form-label{font-size:9px;letter-spacing:2px;color:#d6c9ae;font-weight:700}.form-sparkle{margin-left:auto;color:var(--gold);font-size:20px}
+.name-grid,.birth-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.birth-grid{grid-template-columns:.7fr 1.2fr 1fr}
+label{display:flex;flex-direction:column;gap:9px;color:#bcb7cb;font-size:10px;letter-spacing:.4px}
+input,select{width:100%;height:47px;padding:0 13px;border:1px solid #37334f;background:#0c0b19;color:#f8f5ff;border-radius:2px;outline:none;font:12px "DM Sans",sans-serif}
+input:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 2px #e8c98b15}
+input::placeholder{color:#68647c}
+.form-divider{display:flex;align-items:center;gap:12px;color:var(--gold);font-size:8px;letter-spacing:1.7px;margin:27px 0 18px}
+.form-divider span{height:1px;background:#37334f;flex:1}
+.form-hint{font-size:9px;color:#88849b;margin:17px 0 22px}.form-hint span{color:var(--gold);margin-right:5px}
+.submit-btn{width:100%;height:50px}
+.form-error{color:#f2a5a5;font-size:10px;margin-top:10px;min-height:14px}
+.reading-side{position:relative;padding:35px 20px 25px 10px;display:flex;flex-direction:column;justify-content:center}
+.quote-mark{font-family:"Playfair Display",serif;font-size:70px;line-height:.7;color:var(--gold);opacity:.8}
+.reading-side blockquote{font-family:"Playfair Display",serif;font-size:25px;line-height:1.55;color:#e8e2f1;max-width:400px}
+.quote-author{font-size:8px;letter-spacing:1.7px;color:var(--gold);margin-top:25px;display:flex;align-items:center;gap:10px}
+.quote-author span{width:25px;height:1px;background:var(--gold)}
+.side-decoration{font-size:74px;color:#9c87c5;opacity:.16;position:absolute;right:22px;top:35px}
+.side-small{font-size:10px;color:#827d95;line-height:1.8;margin-top:55px;max-width:330px}
+.result-card{margin-top:45px;background:linear-gradient(135deg,#17152d,#100f20);border:1px solid var(--line);padding:32px 38px;animation:rise .5s ease}
+@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.result-top{display:flex;justify-content:space-between;align-items:center}.reset-btn{background:none;border:0;color:var(--gold);font-size:10px;cursor:pointer}
+.result-main{display:flex;align-items:center;gap:24px;margin:30px 0 20px}
+.result-symbol{width:90px;height:90px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;font-size:48px;color:var(--gold);background:#211c3c}
+.result-kicker{font-size:9px;letter-spacing:2px;color:var(--gold)}.result-main h3{font-size:38px;margin:4px 0}.result-date{font-size:10px;color:var(--muted)}
+.element-pill{margin-left:auto;border:1px solid var(--line);padding:9px 13px;color:var(--gold);font-size:8px;letter-spacing:1.4px}
+.result-description{font-size:13px;line-height:1.9;color:#c4bfd1;max-width:850px}
+.traits-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:30px;border-top:1px solid #39344e;border-bottom:1px solid #39344e;padding:20px 0;gap:15px}
+.traits-grid>div{display:flex;flex-direction:column;gap:9px}.trait-label{font-size:8px;letter-spacing:1.5px;color:#918ba5}.traits-grid strong{font-family:"Playfair Display",serif;font-size:17px;font-weight:500;color:#f0dfbd}
+.reflection{margin-top:25px}.reflection span{font-size:8px;letter-spacing:1.8px;color:var(--gold)}.reflection p{margin-top:9px;color:#c4bfd1;font-family:"Playfair Display",serif;font-size:18px}
+.disclaimer{margin-top:23px;font-size:9px;color:#77738a;line-height:1.6}
+.zodiac-section{background:linear-gradient(180deg,#0e0d20,#121027 50%,#0e0d20);padding:100px 0 110px;border-top:1px solid #ffffff0b;border-bottom:1px solid #ffffff0b}
+.centered{text-align:center;display:flex;flex-direction:column;align-items:center}.centered .eyebrow{justify-content:center}.centered>p{max-width:520px}
+.zodiac-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:50px}
+.zodiac-card{border:1px solid #ffffff13;background:#17152b;padding:23px 20px;min-height:150px;transition:.25s;cursor:pointer}
+.zodiac-card:hover{transform:translateY(-5px);border-color:#d8b87888;background:#201c39}
+.zodiac-symbol{font-size:29px;color:var(--gold);margin-bottom:13px}.zodiac-name{font-family:"Playfair Display",serif;font-size:19px}.zodiac-date{font-size:9px;color:#9690a8;margin-top:6px}.zodiac-element{font-size:8px;letter-spacing:1.5px;color:#d4bd92;margin-top:13px}
+.daily-section{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;padding-top:110px;padding-bottom:115px}
+.daily-card{background:linear-gradient(145deg,#1a1732,#111020);border:1px solid var(--line);padding:30px 34px;position:relative;min-height:350px}
+.daily-card-head{display:flex;justify-content:space-between;font-size:8px;letter-spacing:1.5px;color:var(--gold);margin-bottom:28px}.today-label{color:#89839a}
+.daily-card label{margin-bottom:9px}.daily-select{max-width:230px;height:40px}
+.daily-divider{height:1px;background:#39344e;margin:23px 0}
+.daily-symbol{font-size:27px;color:var(--gold)}.daily-card h3{font-size:25px;margin:10px 0}.daily-card>p{font-size:11px;line-height:1.9;color:#aaa5bb;max-width:430px;min-height:42px}
+.daily-foot{position:absolute;bottom:25px;left:34px;font-size:7px;letter-spacing:1.7px;color:#77718c}
+.site-footer{border-top:1px solid #ffffff12;max-width:1160px;margin:auto;padding:30px 28px 25px;display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;gap:15px}
+.site-footer .brand{font-size:21px}.site-footer p{text-align:center;color:#89849b;font-size:10px}.site-footer p span{color:var(--gold);margin-left:5px}.site-footer>a:nth-of-type(2){text-align:right;color:var(--gold);font-size:10px}.site-footer small{grid-column:1/-1;text-align:center;color:#625e75;font-size:8px;margin-top:15px}
+[hidden]{display:none!important}
+@media(max-width:800px){.nav-links{gap:17px}.hero{min-height:560px}.hero-art{transform:scale(.85)}.reading-layout{gap:35px}.daily-section{gap:45px}.zodiac-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.site-header{height:70px;padding:0 20px}.menu-toggle{display:block;margin-left:auto;margin-right:15px}.header-cta{padding:10px;font-size:10px}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:#121126;padding:20px;flex-direction:column;gap:20px;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.hero{display:flex;flex-direction:column;align-items:flex-start;padding-top:70px;min-height:auto;padding-bottom:90px}.hero h1{font-size:57px}.hero-art{width:100%;height:350px;transform:scale(.78);margin-top:5px}.scroll-indicator{bottom:25px}.intro-strip{align-items:flex-start;gap:14px;flex-direction:column;padding:22px 30px}.reading-section{padding-top:75px;padding-bottom:75px}.section-heading h2,.daily-copy h2{font-size:40px}.reading-layout{grid-template-columns:1fr;gap:25px;margin-top:32px}.form-card{padding:24px 19px}.reading-side{padding:20px 10px}.reading-side blockquote{font-size:22px}.side-small{margin-top:25px}.name-grid{gap:10px}.birth-grid{gap:8px}.birth-grid input,.birth-grid select{padding:0 8px;font-size:11px}.result-card{padding:24px 19px}.result-main{gap:14px;flex-wrap:wrap}.result-symbol{width:70px;height:70px;font-size:38px}.result-main h3{font-size:31px}.element-pill{margin-left:0}.traits-grid{grid-template-columns:repeat(2,1fr)}.zodiac-section{padding:75px 0}.zodiac-grid{grid-template-columns:repeat(2,1fr);gap:9px}.zodiac-card{padding:17px 14px;min-height:135px}.daily-section{grid-template-columns:1fr;gap:30px;padding-top:75px;padding-bottom:80px}.daily-card{padding:25px 22px}.daily-foot{left:22px}.site-footer{grid-template-columns:1fr 1fr;padding:25px 20px}.site-footer p{grid-column:1/-1;grid-row:2;text-align:left}.site-footer>a:nth-of-type(2){grid-column:2;grid-row:1}.site-footer small{margin-top:8px}}
+@media(max-width:380px){.header-cta{display:none}.birth-grid{grid-template-columns:.65fr 1.1fr .9fr}.hero h1{font-size:49px}.zodiac-name{font-size:17px}}

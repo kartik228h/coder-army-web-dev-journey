@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090817">
+  <title>Celestia — Discover Your Cosmic Identity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="starfield" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Celestia home">
+      <span class="brand-mark">✦</span><span>celestia</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#discover">Your reading</a>
+      <a href="#zodiac">Zodiac signs</a>
+      <a href="#daily">Daily insight</a>
+    </nav>
+    <a class="header-cta" href="#discover">Discover yours <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A LITTLE CLOSER TO THE UNIVERSE</div>
+        <h1>The stars have<br> a story <em>for you.</em></h1>
+        <p class="hero-description">Explore your cosmic identity. Discover your zodiac sign, uncover your strengths, and find a little inspiration written in the stars.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#discover">Reveal my reading <span>✦</span></a>
+          <a class="text-link" href="#zodiac">Explore zodiac signs <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="mini-stars">✧ ✦ ✧</span> Your journey begins with the day you were born.</div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+        <div class="planet planet-main"><div class="planet-glow"></div><span>✦</span></div>
+        <div class="planet planet-small"></div>
+        <div class="planet planet-ring"></div>
+        <span class="floating-star star-a">✧</span><span class="floating-star star-b">✦</span>
+        <span class="floating-star star-c">✧</span><span class="floating-star star-d">✦</span>
+        <div class="art-caption"><span>✦</span> WRITTEN IN THE COSMOS</div>
+      </div>
+      <div class="scroll-indicator"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="intro-strip">
+      <div><span class="strip-icon">☾</span><p>Explore the language of the stars</p></div>
+      <div><span class="strip-icon">✧</span><p>Discover your zodiac identity</p></div>
+      <div><span class="strip-icon">☼</span><p>Find inspiration for your day</p></div>
+    </section>
+
+    <section class="reading-section section-wrap" id="discover">
+      <div class="section-heading">
+        <div class="eyebrow"><span class="eyebrow-line"></span> YOUR COSMIC BLUEPRINT</div>
+        <h2>Every story starts<br> <em>with a birthday.</em></h2>
+        <p>Enter your birth details below and let Celestia introduce you to your zodiac sign.</p>
+      </div>
+      <div class="reading-layout">
+        <div class="form-card">
+          <div class="form-card-top"><span class="step-number">01</span><span class="form-label">TELL US ABOUT YOU</span><span class="form-sparkle">✧</span></div>
+          <form id="birth-form">
+            <div class="name-grid">
+              <label>First name<input id="first-name" type="text" placeholder="e.g. Alex" maxlength="35" required></label>
+              <label>Last name<input id="last-name" type="text" placeholder="e.g. Morgan" maxlength="35" required></label>
+            </div>
+            <div class="form-divider"><span></span> YOUR DATE OF BIRTH <span></span></div>
+            <div class="birth-grid">
+              <label>Day<select id="birth-day" required><option value="">Day</option></select></label>
+              <label>Month<select id="birth-month" required>
+                <option value="">Month</option>
+                <option value="1">January</option><option value="2">February</option><option value="3">March</option>
+                <option value="4">April</option><option value="5">May</option><option value="6">June</option>
+                <option value="7">July</option><option value="8">August</option><option value="9">September</option>
+                <option value="10">October</option><option value="11">November</option><option value="12">December</option>
+              </select></label>
+              <label>Year<input id="birth-year" type="number" placeholder="2004" min="1900" required></label>
+            </div>
+            <p class="form-hint"><span>ⓘ</span> Your details are used only in this browser to create your reading.</p>
+            <button class="primary-btn submit-btn" type="submit">Reveal my zodiac <span>✦</span></button>
+            <p class="form-error" id="form-error" role="alert"></p>
+          </form>
+        </div>
+        <div class="reading-side">
+          <div class="quote-mark">“</div>
+          <blockquote>The universe is not outside of you. Look inside yourself; everything that you want, you already are.</blockquote>
+          <div class="quote-author"><span></span> A MOMENT OF COSMIC REFLECTION</div>
+          <div class="side-decoration">☾</div>
+          <p class="side-small">A gentle reminder: astrology can be a fun tool for self-reflection, not a fixed map of your future.</p>
+        </div>
+      </div>
+
+      <div class="result-card" id="result-card" aria-live="polite" hidden>
+        <div class="result-top"><span class="eyebrow"><span class="eyebrow-line"></span> YOUR COSMIC SNAPSHOT</span><button id="reset-result" class="reset-btn">Start again ↗</button></div>
+        <div class="result-main">
+          <div class="result-symbol" id="result-symbol">♈</div>
+          <div><p class="result-kicker">HELLO, <span id="result-name">FRIEND</span></p><h3 id="result-sign">Aries</h3><p class="result-date" id="result-date"></p></div>
+          <div class="element-pill" id="result-element">FIRE SIGN</div>
+        </div>
+        <p class="result-description" id="result-description"></p>
+        <div class="traits-grid">
+          <div><span class="trait-label">YOUR ELEMENT</span><strong id="trait-element">Fire</strong></div>
+          <div><span class="trait-label">RULING PLANET</span><strong id="trait-planet">Mars</strong></div>
+          <div><span class="trait-label">LUCKY COLOUR</span><strong id="trait-colour">Coral</strong></div>
+          <div><span class="trait-label">LUCKY DAY</span><strong id="trait-day">Tuesday</strong></div>
+        </div>
+        <div class="reflection"><span>✧ A THOUGHT FOR YOU</span><p id="result-reflection"></p></div>
+        <p class="disclaimer">This is an entertainment-style zodiac reading based on your sun sign, not a scientific or professional prediction.</p>
+      </div>
+    </section>
+
+    <section class="zodiac-section" id="zodiac">
+      <div class="section-wrap">
+        <div class="section-heading centered">
+          <div class="eyebrow"><span class="eyebrow-line"></span> THE CELESTIAL CIRCLE <span class="eyebrow-line"></span></div>
+          <h2>Meet the <em>twelve signs.</em></h2>
+          <p>Each sign belongs to one of the four elements. Explore the zodiac and its symbolism.</p>
+        </div>
+        <div class="zodiac-grid" id="zodiac-grid"></div>
+      </div>
+    </section>
+
+    <section class="daily-section section-wrap" id="daily">
+      <div class="daily-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> A DAILY MOMENT</div>
+        <h2>A little cosmic<br><em>inspiration.</em></h2>
+        <p>Choose your zodiac sign for a gentle reflection to carry into your day.</p>
+      </div>
+      <div class="daily-card">
+        <div class="daily-card-head"><span>✧ YOUR DAILY INSIGHT</span><span class="today-label" id="today-label"></span></div>
+        <label for="daily-sign">Choose your sign</label>
+        <select id="daily-sign" class="daily-select"></select>
+        <div class="daily-divider"></div>
+        <div class="daily-symbol" id="daily-symbol">✦</div>
+        <h3 id="daily-title">Your moment of clarity</h3>
+        <p id="daily-text">Choose a zodiac sign to reveal today's reflection.</p>
+        <span class="daily-foot">TAKE WHAT RESONATES. LEAVE WHAT DOESN'T.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#home"><span class="brand-mark">✦</span><span>celestia</span></a>
+    <p>Made for curious minds and stargazers. <span>✧</span></p>
+    <a href="#home">Back to top ↑</a>
+    <small>© <span id="year-now"></span> Celestia. For entertainment and self-reflection.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

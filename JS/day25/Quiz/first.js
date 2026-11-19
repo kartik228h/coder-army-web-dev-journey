@@ -290,12 +290,22 @@ const questions = [
 // });
 
 function RandomQuestion() {
-   const data=new Set()
-   while(data.size!=5){
-      const index=Math.floor(Math.random()*questions.length);
-      data.add(questions[index]);
-   }
-   return [...data];
+  //  const data=new Set()
+  //  while(data.size!=5){
+  //     const index=Math.floor(Math.random()*questions.length);
+  //     data.add(questions[index]);
+  //  }
+  //  return [...data];
+  const arr= [];
+  let length = questions.length;
+  for(let i=0;i<5;i++){
+    const index=Math.floor(Math.random()*length);
+    arr.push(questions[index]);
+    // swap
+    [questions[index],questions[length-1]]=[questions[length-1],questions[index]];
+    length--;
+  }
+  return arr;
 }
 //select the form and insert all the elements into it
 const form = document.getElementById('quizForm');

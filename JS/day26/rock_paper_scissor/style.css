@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #172554, #4c1d95);
+    font-family: Arial, sans-serif;
+}
+
+#board {
+    width: 420px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+#title {
+    font-size: 24px;
+    color: #172554;
+}
+
+/* Choose buttons */
+#self {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#self button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#rock    { background-color: #475569; }
+#paper   { background-color: #2563eb; }
+#scissor { background-color: #db2777; }
+
+#self button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+}
+
+/* Arena: left = you, right = computer */
+#arena {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.side {
+    flex: 1;
+    min-height: 140px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#player-choice { background-color: #dbeafe; }
+#apponent      { background-color: #fee2e2; }
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #334155;
+}
+
+.side img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* src set hone tak image hidden (broken icon nahi dikhega) */
+.side img:not([src]),
+.side img[src=""] {
+    display: none;
+}
+
+/* Computer ka hand left face kare */
+#apponent img {
+    transform: scaleX(-1);
+}
+
+#winning-message {
+    margin-top: 20px;
+    min-height: 28px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+#restartButton {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background-color: #dc2626;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#restartButton:hover {
+    background-color: #b91c1c;
+}
